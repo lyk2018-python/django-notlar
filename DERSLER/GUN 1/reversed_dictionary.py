@@ -1,4 +1,4 @@
-#usr/bin/env python
+#!usr/bin/env python
 sozluk ={'elma': 'apple', 'muz': 'banana', 'uzum': 'grapes', 'havuc': 'carrot'}
 print(sozluk)
 reverse_sozluk = {i:j for j,i in sozluk.items()}
