@@ -31,7 +31,7 @@ python manage.py startapp news
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news',
-]
+	]
 
 admin panelde düzenlemek için news/admin.py dosyasına;
 
