@@ -1,7 +1,10 @@
 #### Virtualenv için
 *virtualenv --python=python3 <File-Name>*
+
 *source <File-Name>/bin/activate*
+
 *virtualenv --python=python3 lyk*
+
 *source lyk/bin/activate*
 
 #### Ardından o konuma django kurmak için
@@ -9,6 +12,7 @@
 
 #### Django projesi oluşturmak için, ama önce klasör dizinini belirle
 *django-admin startproject <Project-Name>*
+
 *django-admin startproject Melek*
 
 #### Startprojectten sonra proje dizinine git sonra;
@@ -20,19 +24,20 @@
 
 #### App başlatmak için
 *python manage.py startapp <App-Adi>*
+
 *python manage.py startapp news*
 * Melek/Melek/settings.py dosyasında installed apps güncelle(modeli ekle)
 
 
-	INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'news',
-	]
+		INSTALLED_APPS = [
+	    'django.contrib.admin',
+	    'django.contrib.auth',
+	    'django.contrib.contenttypes',
+	    'django.contrib.sessions',
+	    'django.contrib.messages',
+	    'django.contrib.staticfiles',
+	    'news',
+		]
 
 admin panelde düzenlemek için news/admin.py dosyasına;
 
@@ -51,17 +56,18 @@ ekle
 * Global erişişm için Melek/Melek/settings.py dosyasında
 
 
-	ALLOWED_HOSTS = ['*']
+		ALLOWED_HOSTS = ['*']
+	
 * şeklinde güncellenmeli
 #### Shell kullanma örneği
 *python manage.py shell*
 
-	from news.models import NewsItem
-	NewsItem()
-	NewsItem(title="fikibok")
-	<NewsItem: fikibok>
-	haber = NewsItem()
-	haber.title = "fiki fiki"
-	haber.content = "emoji"
-	haber.save()
-	haber.id
+		from news.models import NewsItem
+		NewsItem()
+		NewsItem(title="fikibok")
+		<NewsItem: fikibok>
+		haber = NewsItem()
+		haber.title = "fiki fiki"
+		haber.content = "emoji"
+		haber.save()
+		haber.id
