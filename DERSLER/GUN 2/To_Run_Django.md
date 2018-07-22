@@ -1,15 +1,15 @@
 #### Virtualenv için
-*virtualenv --python=python3 <File-Name>
-source <File-Name>/bin/activate
-virtualenv --python=python3 lyk
-source lyk/bin/activate*
+*virtualenv --python=python3 <File-Name>*
+*source <File-Name>/bin/activate*
+*virtualenv --python=python3 lyk*
+*source lyk/bin/activate*
 
 #### Ardından o konuma django kurmak için
 *pip install django*
 
 #### Django projesi oluşturmak için, ama önce klasör dizinini belirle
-*django-admin startproject <Project-Name>
-django-admin startproject Melek*
+*django-admin startproject <Project-Name>*
+*django-admin startproject Melek*
 
 #### Startprojectten sonra proje dizinine git sonra;
 *python manage.py runserver*
@@ -19,8 +19,8 @@ django-admin startproject Melek*
 		return self.title
 
 #### App başlatmak için
-*python manage.py startapp <App-Adi>
-python manage.py startapp news*
+*python manage.py startapp <App-Adi>*
+*python manage.py startapp news*
 * Melek/Melek/settings.py dosyasında installed apps güncelle(modeli ekle)
 
 
@@ -51,7 +51,7 @@ ekle
 * Global erişişm için Melek/Melek/settings.py dosyasında
 
 
-	ALLOWED_HOSTS '*' 
+	ALLOWED_HOSTS = ['*']
 * şeklinde güncellenmeli
 #### Shell kullanma örneği
 *python manage.py shell*
