@@ -1,5 +1,6 @@
 import random
 
+
 class Probablity:
     """
         This module functions returns head or tail, rock or paper or scissors,
