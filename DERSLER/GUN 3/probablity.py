@@ -1,7 +1,6 @@
 import random
 
 class Probablity:
-
     """
         This module functions returns head or tail, rock or paper or scissors,
         dice or roll. It depends on what you want.
@@ -10,8 +9,6 @@ class Probablity:
             head_tail()
             rock_paper_scissors()
     """
-
-
     def roll_dices(self,number_of_dices):
         faces = {
             1:0,
