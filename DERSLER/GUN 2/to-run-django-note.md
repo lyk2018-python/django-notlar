@@ -19,30 +19,32 @@
 *python manage.py runserver*
 
 #### İstenilen Itemın ismini ezmek için models.py a eklenir;
+```python
 	def __str__(self):
 		return self.title
-
+```
 #### App başlatmak için
 *python manage.py startapp <App-Adi>*
 
 *python manage.py startapp news*
 * Melek/Melek/settings.py dosyasında installed apps güncelle(modeli ekle)
 
-
-		INSTALLED_APPS = [
-	    'django.contrib.admin',
-	    'django.contrib.auth',
-	    'django.contrib.contenttypes',
-	    'django.contrib.sessions',
-	    'django.contrib.messages',
-	    'django.contrib.staticfiles',
-	    'news',
-		]
-
+```python
+	INSTALLED_APPS = [
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+	'news',
+	]
+```
 admin panelde düzenlemek için news/admin.py dosyasına;
-
+```python
 	from news.models import NewsItem
 	admin.site.register(NewsItem)
+```
 ekle
 
 #### Migrationsları oluşturma
@@ -55,19 +57,20 @@ ekle
 *python manage.py runserver 0.0.0.0:80*
 * Global erişişm için Melek/Melek/settings.py dosyasında
 
-
+```python
 		ALLOWED_HOSTS = ['*']
-	
+```
 * şeklinde güncellenmeli
 #### Shell kullanma örneği
 *python manage.py shell*
-
-		from news.models import NewsItem
-		NewsItem()
-		NewsItem(title="fikibok")
-		<NewsItem: fikibok>
-		haber = NewsItem()
-		haber.title = "fiki fiki"
-		haber.content = "emoji"
-		haber.save()
-		haber.id
+```python
+	from news.models import NewsItem
+	NewsItem()
+	NewsItem(title="fikibok")
+	<NewsItem: fikibok>
+	haber = NewsItem()
+	haber.title = "fiki fiki"
+	haber.content = "emoji"
+	haber.save()
+	haber.id
+```
