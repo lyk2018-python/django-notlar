@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<meta charset="utf-8">
+ 		<title>{{ title }}</title>
+	</head>
+	<body>
+		{% for node in nodes %}
+			<a href="{% url 'node_detail' node.id %}">{{ node }}<a/> <br/>
+		{% endfor %}
+	</body>
+</html>
