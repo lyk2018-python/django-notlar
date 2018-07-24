@@ -20,3 +20,9 @@ def node_detail(request, id):
     		"outgoing": outgoing,
     		"node": node,
     	})
+
+def about(request):
+	return render(request, "about.html")
+
+def support(request):
+	return render(request, "support.html")

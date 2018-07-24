@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
- 		<meta charset="utf-8">
- 		<title>{{ title }}</title>
-	</head>
-	<body>
+{% extends "base_template.html" %}
+{% block title %}
+	Home Page
+{% endblock %}
+{% block content %}
 		{% for node in nodes %}
-			<a href="{% url 'node_detail' node.id %}">{{ node }}<a/> <br/>
+			<a href="{% url 'node_detail' node.id %}">{{ node }}<a/> 
+			<br/>
 		{% endfor %}
-	</body>
-</html>
+{% endblock %}
