@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+	{% block title %}
+		{{node.name}}
+	{% endblock %}
+	{% block content %}
+		<h1>{{ node.name }}</h1>
+		{% if incoming %}
+			<h3>Incoming</h3>
+			{% for edge in incoming %}
+				{{ edge }} <br/>
+			{% endfor %}
+		{% endif %}
+		{% if outgoing %}
+			<h3>Outgoing</h3>
+			{% for edge in outgoing %}
+				{{ edge }} <br/>
+			{% endfor %}
+		{% endif %}
+	{% endblock %}
