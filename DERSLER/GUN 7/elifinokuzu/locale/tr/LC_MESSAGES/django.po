@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-27 13:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: dictionary/forms.py:9
+msgid "Source Language"
+msgstr "Kaynak Dil"
+
+#: dictionary/forms.py:12
+msgid "Example: Elif in Turkish language"
+msgstr "Örnek: Türkçe'de Elif"
+
+#: dictionary/forms.py:14
+msgid "Source Node"
+msgstr "Kaynak Düğüm"
+
+#: dictionary/forms.py:18
+msgid "Target Language"
+msgstr "Hedef Dil"
+
+#: dictionary/forms.py:21
+msgid "Example: Alpha in Ancient Greek"
+msgstr "Örnek: Eski Yunan'da Alfa"
+
+#: dictionary/forms.py:23
+msgid "Target Node"
+msgstr "Hedef Düğüm"
+
+#: dictionary/forms.py:28
+msgid "Type of Edge"
+msgstr "İlişki Tipi"
+
+#: dictionary/forms.py:31
+msgid "Example: Sevan Nişanyan's Elifin Öküzü"
+msgstr "Örnek: Sevan Nişanyan'ın Elifin Öküzü"
+
+#: dictionary/forms.py:33
+msgid "Resource"
+msgstr "Kaynak"
+
+#: dictionary/models.py:7 elifinokuzu/settings.py:95
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: dictionary/models.py:8
+msgid "French"
+msgstr "Fransızca"
+
+#: dictionary/models.py:9
+msgid "German"
+msgstr "Almanca"
+
+#: dictionary/models.py:10
+#, fuzzy
+#| msgid "English"
+msgid "Polish"
+msgstr "Lehçe"
+
+#: dictionary/models.py:11
+msgid "Kurdish"
+msgstr "Kürtçe"
+
+#: dictionary/models.py:12
+msgid "Latin"
+msgstr "Latince"
+
+#: dictionary/models.py:13 elifinokuzu/settings.py:94
+msgid "English"
+msgstr "İngilizce"
+
+#: dictionary/models.py:14
+msgid "Spanish"
+msgstr "İspanyolca"
+
+#: dictionary/models.py:15
+msgid "Arabic"
+msgstr "Arapça"
+
+#: dictionary/models.py:19
+msgid "Derives from"
+msgstr "Kökünden gelir"
+
+#: dictionary/models.py:20
+msgid "Symbol of"
+msgstr "Sembolü"
+
+#: dictionary/models.py:21
+msgid "Compound of"
+msgstr "Bileşimi"
+
+#: templates/accounts/dashboard.html:5
+msgid "Welcome"
+msgstr "Hoşgeldiniz"
+
+#: templates/base.html:23
+msgid "Home"
+msgstr "Ana Sayfa"
+
+#: templates/base.html:26
+msgid "Logout"
+msgstr "Çıkış Yap"
+
+#: templates/base.html:28
+msgid "Signup"
+msgstr "Kayıt ol"
+
+#: templates/base.html:29 templates/registration/login.html:5
+#: templates/registration/login.html:9
+msgid "Login"
+msgstr "Giriş yap"
+
+#: templates/base.html:31
+msgid "About"
+msgstr "Hakkımızda"
+
+#: templates/base.html:32 templates/submit.html:6 templates/submit.html:15
+msgid "Submit"
+msgstr "Gönder"
+
+#: templates/base.html:40
+msgid ""
+"elifinokuzu is an open-source etymological dictionary. Support us on github."
+msgstr ""
+"elifinöküzü açık kaynak kodlu etimolojik sözlüktür. Bizi github üzerinden "
+"destekleyebilirsiniz."
+
+#: templates/home.html:4
+msgid "Home Page"
+msgstr "Ana Sayfa"
+
+#: templates/home.html:11
+msgid "GET A RANDOM WORD"
+msgstr "RASTGELE KELİME"
+
+#: templates/home.html:13
+msgid "Database is EMPTY"
+msgstr "Veritabanı BOŞ"
+
+#: templates/registration/signup.html:5 templates/registration/signup.html:9
+msgid "Sign up"
+msgstr "Kayıt ol"
+
+#: templates/submit.html:4
+msgid "Submit Page"
+msgstr "Gönder"
+
+#: templates/submit.html:9
+msgid "Please login for creating a new record."
+msgstr "Yeni kayıt oluşturmak için lütfen giriş yapınız."

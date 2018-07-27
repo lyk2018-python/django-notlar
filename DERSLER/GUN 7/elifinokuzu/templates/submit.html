@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Submit Page' %}{% endblock %}
+{% block content %}
+  <h2>{% trans 'Submit' %}</h2>
+  {% if user.is_anonymous %}
+    <div class="info warning">
+      {% trans 'Please login for creating a new record.' %}
+    </div>
+  {% else %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans 'Submit' %}</button>
+  </form>
+  {% endif %}
+{% endblock %}

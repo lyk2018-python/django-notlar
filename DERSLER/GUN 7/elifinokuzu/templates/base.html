@@ -1,0 +1,43 @@
+{% load static %}
+  <link rel="stylesheet" href="{% static 'layout/styles/base.css'%}" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %} "/>
+  {% load i18n %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} Default Title{% endblock %}</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a
+          id="logo"
+          href="/"
+        >
+          <img src="{% static 'logo.png' %}" />
+        </a>
+      </header>
+      <nav>
+        <a href="{% url 'home' %}">{% trans 'Home' %}</a>
+        {% if user.is_authenticated %}
+          Hello {{ user.username }}
+          <a href="{% url 'logout'%}">{% trans 'Logout' %}</a>
+        {% else %}
+          <a href="{% url 'signup'%}">{% trans 'Signup' %}</a>
+          <a href="{% url 'login'%}">{% trans 'Login' %}</a>
+        {% endif %}
+        <a href="{% url 'about' %}">{% trans 'About' %}</a>
+        <a href="{% url 'submit' %}">{% trans 'Submit' %}</a>
+      </nav>
+      <div class="content">
+        {% block content %}
+        lorem ipsum dolor sit amet
+        {% endblock %}
+      </div>
+      <footer>
+        {% trans 'elifinokuzu is an open-source etymological dictionary. Support us on github.' %}
+      </footer>
+    </div>
+  </body>
+</html>

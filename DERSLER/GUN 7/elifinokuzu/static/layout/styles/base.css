@@ -1,0 +1,151 @@
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 1.4em;
+}
+.info{
+  display: block;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.warning{
+  background-color: #fcf8e3;
+  border:1px solid #faebcc;
+  color: #333;
+}
+.container {
+  width: 37em;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+}
+
+#logo img {
+  width: 190px;
+}
+
+nav {
+  background: #e6fff7;
+  padding: 0.6em;
+}
+
+nav a {
+  color: black;
+}
+
+.content {
+  padding: 1em 0;
+  color: #404040;
+}
+
+nav a {
+  float: right;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+footer {
+  background: lightgray;
+  padding: 0.6em;
+}
+
+.content h3 {
+  margin: 0;
+  padding: 0.4em 1em;
+  font-weight: normal;
+  color: #464646;
+}
+
+/* Story — Relationship */
+.story-relationship {
+  border: 3px solid #f3f3f3;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 1em;
+}
+
+.story-relationship a {
+  text-decoration: underline;
+  color: black;
+}
+
+/* Django */
+label {
+  display: block;
+}
+
+input {
+  font-size: 1.2em;
+  border: 3px solid yellow;
+  outline: none;
+  margin: 2px 0;
+}
+
+input:focus {
+  border: 3px solid black;
+}
+
+select {
+  font-size: 1.2em;
+  margin: 2px 0;
+}
+
+form ul li {
+  list-style: none;
+}
+
+form ul {
+  padding: 0 10px;
+}
+
+.helptext {
+  color: darkgray;
+  display: block;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 0.3em 0.8em;
+}
+
+/* Heading sets */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 40px;
+  border-bottom: 3px solid yellow;
+  font-weight: normal;
+  text-align: center;
+  padding: 0 0 10px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 20px;
+}
