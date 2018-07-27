@@ -1,9 +1,9 @@
 ## Deployment
 https://www.vultr.com/ yada https://www.digitalocean.com/ gibi sitelerde hesap açılır, gerekli server ve server için OS seçilir, server kiralanır.
-Server kurulumu bittikten sonra terminalden SSH ile sunucuya bağlanılır.
+Server kurulumu bittikten sonra terminalden SSH ile sunucuya bağlanılır. Gerekli ise -p <PORT> numarası eklenir.
 
 ```
-	ssh root@<IP>
+	ssh root@<IP> -p <PORT>
 ```
 Bağlandıktan sonra 
 ```
@@ -35,17 +35,20 @@ Daha sonrasında yarattığımız virtual environment a django kurulur
 
 ```
 	pip install django
+	pip install django-recaptcha
 ```
 Virtual environmentların dışında projelerin bulunduğu klasöre proje clonelanır yada yaratılır.
 ```
 	//Örnek
 	mkdir Projeler
 	cd Projeler
+	sudo apt-get install git
 	git clone <URI>
 ```
 #### Proje deploymentı
+manage.py bulunduğu klasöre gittikten sonra makemigrations yapılır.cd 
 ```
-	python manage.py runserver
+	python manage.py makemigrations
 ```
 #### Migrate işlemi
 ```
@@ -55,7 +58,7 @@ Virtual environmentların dışında projelerin bulunduğu klasöre proje clonel
 ```
 	python manage.py createsuperuser
 ```
-#### Alınan domain allowed hosts a eklenir
+#### Alınan domain ( HTTP Proxy adresi ) allowed hosts a eklenir 
 ```python
 	ALLOWED_HOSTS = ["elifinokuzu.org"]
 ```
