@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ node.name }}{% endblock %}
+{% block content %}
+    <form action="/report">
+      <input type="submit" class="report_button" value="Report" />
+  </form>
+  <h1>{{ node.name }}</h1>
+  {% if incoming %}
+    <h1>Incoming</h1>
+    {% for edge in incoming %}
+      <hr><a href="{% url 'edge_detail' edge.id %}"><h5>{{ edge }}</h5></a>
+    {% endfor %}
+  {% endif %}
+  {% if outgoing %}
+    <h1>Outgoing</h1>
+    {% for edge in outgoing %}
+      <hr><a href="{% url 'edge_detail' edge.id %}"><h5>{{ edge }}</h5></a>
+    {% endfor %}
+  {% endif %}
+  {% if user.is_authenticated %}
+    <hr><a class="comment-btn" href="{% url 'add_comment_to_node' node.id %}"><h3>Add comment</h3></a>
+  {% endif %}
+{% for comment in node.comments_node.all %}
+    <div>
+        <h4><strong>{{ comment.user }}:</strong></h4>
+        <p>{{ comment.text }}</p>
+        <h5>{{ comment.created_date|date:"d M, Y" }}</h5>
+    </div>
+<hr>
+{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %}
+
+{% endblock %}

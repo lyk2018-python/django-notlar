@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Report Page{% endblock %}
+{% block content %}
+    <h2>Submit Report</h2
+    {% if user.is_anonymous %}
+        <div class="info warning">
+            <p>Please login for creating a new report</p>
+        </div>
+    {% else %}
+        <h2>Submit Report</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" onclick="this.form.submit(); this.disabled=true; this.value='Sending…'">Submit</button>
+        </form>
+    {% endif %}
+    {% endblock %}

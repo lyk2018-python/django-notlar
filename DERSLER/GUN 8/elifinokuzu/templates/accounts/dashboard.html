@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% trans 'Welcome' %} {{ user.username }}</h2>
+  {% trans 'Name & Surname:' %} {{ user.first_name }} {{ user.last_name }}
+  <br>
+  {% trans 'User ID:' %} {{ user.id }}
+  <br>
+  {% trans 'Username:' %} {{ user.username }}
+  <br>
+  {% trans 'eMail Address:' %} {{ user.email }}
+  <br>
+  {% trans 'Last Login:' %} {{ user.last_login }}
+  <br>
+  {% trans 'Date Joined:' %} {{ user.date_joined }}
+{% endblock %}

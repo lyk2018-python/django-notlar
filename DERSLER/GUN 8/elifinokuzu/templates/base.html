@@ -1,0 +1,75 @@
+{% load static %}
+  <link rel="stylesheet" href="{% static 'layout/styles/base.css'%}" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %} "/>
+  {% load i18n %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} Default Title{% endblock %}</title>
+    <script>
+
+    function myFunction() {
+      document.getElementById("cangoDropdown").classList.toggle("button_show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('button_show')) {
+openDropdown.classList.remove('button_show');
+}
+}
+}
+}
+</script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a
+          id="logo"
+          href="/"
+        >
+          <img src="{% static 'logo.png' %}" />
+        </a>
+      </header>
+      <nav>
+        <a href="{% url 'home' %}">{% trans 'Home' %}</a>
+               <div class="menu">
+          <a href="{% url 'home' %}">Home</a>
+
+         <a id="aboutbutton" onclick="myFunction()" class="dropbtn ">About</a>
+         <div id="cangoDropdown" class="dropdown-content">
+         <a href="{% url 'about'%}">Elifin Okuzu</a>
+         <a href="{% url 'about'%}#sozluk">Elif's Ox or The Surprises Book</a>
+         <a href="{% url 'about'%}#oyk">Mustafa Akgül Free Software<br />Summer Camp</a>
+         <a href="{% url 'about'%}#fsf">Free Software Philosophy</a>
+         <a href="{% url 'about'%}#akgul">Mustafa Akgül</a>
+         </div>
+
+        {% if user.is_authenticated %}
+          Hello {{ user.username }}
+          <a href="{% url 'logout'%}">{% trans 'Logout' %}</a>
+        {% else %}
+          <a href="{% url 'signup'%}">{% trans 'Signup' %}</a>
+          <a href="{% url 'login'%}">{% trans 'Login' %}</a>
+        {% endif %}
+        <a href="{% url 'support' %}">{% trans 'About' %}</a>
+        <a href="{% url 'submit' %}">{% trans 'Submit' %}</a>
+      </nav>
+      <div class="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <footer>
+        {% trans 'elifinokuzu is  an open-source etymological dictionary. <a href="/support">Support</a> us on github.' %}
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Home Page' %}{% endblock %}
+{% block content %}
+  {% for node in nodes %}
+	<div>
+	    <h1><a class="nodeclass" href="{% url 'node_detail' node.id %}">{{ node.name }}-{{ node.language }}</a></h1>
+	   	<a href="{% url 'node_detail' node.id %}">Comments: {{ node.comments.count }}</a><br><hr>
+	</div>
+  {% endfor %}
+{% if random_word != "None" %}
+  <a href="{% url 'node_detail' random_word %}">{% trans 'GET A RANDOM WORD' %}</a><br>
+{% else %}
+  <h2>{% trans 'Database is EMPTY' %}</h2>
+{% endif %}
+{% endblock %}

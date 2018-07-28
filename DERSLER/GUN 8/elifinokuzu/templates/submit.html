@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Submit Page' %}{% endblock %}
+{% block content %}
+
+{% if error %}
+<h1>{{ error }}</h1>
+{% endif %}
+
+{% if form %}
+ {% if user.is_authenticated %}
+  <h2>{% trans 'Submit' %}</h2>
+  {% if user.is_anonymous %}
+    <div class="info warning">
+      {% trans 'Please login for creating a new record.' %}
+    </div>
+  {% else %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" onclick="this.form.submit(); this.disabled=true; this.value='Sending…'">{% trans 'Submit' %}</button>
+  </form>
+  {% endif %}
+ {% endif %}
+ <h1>You need to log in to submit a word</h1>
+ {% else %}
+{% endif %}
+{% endblock %}
