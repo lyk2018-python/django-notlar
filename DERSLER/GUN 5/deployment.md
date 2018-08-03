@@ -52,7 +52,7 @@ manage.py bulunduğu klasöre gittikten sonra makemigrations yapılır.cd
 ```
 #### Migrate işlemi
 ```
-	pyton manage.py migrate
+	python manage.py migrate
 ```
 #### Superuser oluşturma işlemi
 ```
